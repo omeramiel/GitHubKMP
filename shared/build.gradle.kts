@@ -2,9 +2,28 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 
 plugins {
     kotlin("multiplatform")
+    id("com.android.library")
+}
+
+android {
+    compileSdkVersion(29)
+    defaultConfig {
+        minSdkVersion(15)
+    }
+    buildTypes {
+        getByName("release") {
+            isMinifyEnabled = false
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
+    }
 }
 
 kotlin {
+    android()
+
     //select iOS target platform depending on the Xcode environment variables
     val iOSTarget: (String, KotlinNativeTarget.() -> Unit) -> KotlinNativeTarget =
         if (System.getenv("SDK_NAME")?.startsWith("iphoneos") == true)
@@ -15,22 +34,23 @@ kotlin {
     iOSTarget("ios") {
         binaries {
             framework {
-                baseName = "SharedCode"
+                baseName = "shared"
             }
         }
     }
 
-    jvm("android")
-
     sourceSets["commonMain"].dependencies {
-        implementation("org.jetbrains.kotlin:kotlin-stdlib-common")
+        api("org.jetbrains.kotlin:kotlin-stdlib-common")
     }
 
     sourceSets["androidMain"].dependencies {
-        implementation("org.jetbrains.kotlin:kotlin-stdlib")
+        api("org.jetbrains.kotlin:kotlin-stdlib")
+    }
+
+    sourceSets["iosMain"].dependencies {
+
     }
 }
-
 
 val packForXcode by tasks.creating(Sync::class) {
     group = "build"
