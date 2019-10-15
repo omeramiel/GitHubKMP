@@ -41,14 +41,19 @@ kotlin {
 
     sourceSets["commonMain"].dependencies {
         api("org.jetbrains.kotlin:kotlin-stdlib-common")
+        implementation(Libs.ktor_client_core)
+        implementation(Libs.kotlinx_coroutines_core_common)
     }
 
     sourceSets["androidMain"].dependencies {
         api("org.jetbrains.kotlin:kotlin-stdlib")
+        implementation(Libs.ktor_client_android)
+        implementation(Libs.kotlinx_coroutines_android)
     }
 
     sourceSets["iosMain"].dependencies {
-
+        implementation(Libs.ktor_client_ios)
+        implementation(Libs.kotlinx_coroutines_core_native)
     }
 }
 

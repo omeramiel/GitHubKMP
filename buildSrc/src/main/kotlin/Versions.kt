@@ -12,9 +12,15 @@ import org.gradle.plugin.use.PluginDependencySpec
  * YOU are responsible for updating manually the dependency version.
  */
 object Versions {
-    const val de_fayard_buildsrcversions_gradle_plugin: String = "0.6.5"
+    const val de_fayard_buildsrcversions_gradle_plugin: String = "0.7.0" // available: "0.7.0"
 
     const val com_android_tools_build_gradle: String = "3.6.0-beta01"
+
+    const val kotlinx_coroutines_core_common: String = "1.3.2"
+
+    const val kotlinx_coroutines_core_native: String = "1.3.2"
+
+    const val kotlinx_coroutines_android: String = "1.3.2"
 
     const val androidx_test_ext_junit: String = "1.1.1"
 
@@ -31,6 +37,8 @@ object Versions {
     const val appcompat: String = "1.1.0"
 
     const val core_ktx: String = "1.1.0"
+
+    const val io_ktor: String = "1.3.0-beta-1"
 
     const val aapt2: String = "3.6.0-beta01-5836729"
 

@@ -18,6 +18,24 @@ object Libs {
             Versions.com_android_tools_build_gradle
 
     /**
+     * https://github.com/Kotlin/kotlinx.coroutines
+     */
+    const val kotlinx_coroutines_core_common: String =
+            "org.jetbrains.kotlinx:kotlinx-coroutines-core-common:" +
+            Versions.kotlinx_coroutines_core_common
+
+    const val kotlinx_coroutines_core_native: String =
+            "org.jetbrains.kotlinx:kotlinx-coroutines-core-native:" +
+            Versions.kotlinx_coroutines_core_native
+
+    /**
+     * https://github.com/Kotlin/kotlinx.coroutines
+     */
+    const val kotlinx_coroutines_android: String =
+            "org.jetbrains.kotlinx:kotlinx-coroutines-android:" +
+            Versions.kotlinx_coroutines_android
+
+    /**
      * https://developer.android.com/testing
      */
     const val androidx_test_ext_junit: String = "androidx.test.ext:junit:" +
@@ -98,6 +116,21 @@ object Libs {
      * http://developer.android.com/tools/extras/support-library.html
      */
     const val core_ktx: String = "androidx.core:core-ktx:" + Versions.core_ktx
+
+    /**
+     * https://github.com/ktorio/ktor
+     */
+    const val ktor_client_android: String = "io.ktor:ktor-client-android:" + Versions.io_ktor
+
+    /**
+     * https://github.com/ktorio/ktor
+     */
+    const val ktor_client_core: String = "io.ktor:ktor-client-core:" + Versions.io_ktor
+
+    /**
+     * https://github.com/ktorio/ktor
+     */
+    const val ktor_client_ios: String = "io.ktor:ktor-client-ios:" + Versions.io_ktor
 
     /**
      * https://developer.android.com/studio
