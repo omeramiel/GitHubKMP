@@ -16,6 +16,9 @@
 		84CA60AC2355F08800D8DC52 /* shared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842182532355B57300E01C39 /* shared.framework */; };
 		84CA60AD2355F08800D8DC52 /* shared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 842182532355B57300E01C39 /* shared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		84CA60B02355F4DF00D8DC52 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA60AF2355F4DF00D8DC52 /* BaseView.swift */; };
+		84CA60B223563EF500D8DC52 /* MemberList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA60B123563EF500D8DC52 /* MemberList.swift */; };
+		84CA60B423563FE200D8DC52 /* MemberCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA60B323563FE200D8DC52 /* MemberCellTableViewCell.swift */; };
+		84CA60B62356433C00D8DC52 /* MemberCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CA60B52356433C00D8DC52 /* MemberCellTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +46,9 @@
 		8421824C2355B54800E01C39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		842182532355B57300E01C39 /* shared.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = shared.framework; path = "../../shared/build/xcode-frameworks/shared.framework"; sourceTree = "<group>"; };
 		84CA60AF2355F4DF00D8DC52 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		84CA60B123563EF500D8DC52 /* MemberList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberList.swift; sourceTree = "<group>"; };
+		84CA60B323563FE200D8DC52 /* MemberCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberCellTableViewCell.swift; sourceTree = "<group>"; };
+		84CA60B52356433C00D8DC52 /* MemberCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberCellTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,9 @@
 				842182492355B54800E01C39 /* LaunchScreen.storyboard */,
 				8421824C2355B54800E01C39 /* Info.plist */,
 				84CA60AF2355F4DF00D8DC52 /* BaseView.swift */,
+				84CA60B123563EF500D8DC52 /* MemberList.swift */,
+				84CA60B323563FE200D8DC52 /* MemberCellTableViewCell.swift */,
+				84CA60B52356433C00D8DC52 /* MemberCellTableViewCell.xib */,
 			);
 			path = GitHubKmp;
 			sourceTree = "<group>";
@@ -160,6 +169,7 @@
 				8421824B2355B54800E01C39 /* LaunchScreen.storyboard in Resources */,
 				842182482355B54800E01C39 /* Assets.xcassets in Resources */,
 				842182462355B54600E01C39 /* Main.storyboard in Resources */,
+				84CA60B62356433C00D8DC52 /* MemberCellTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +201,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				842182432355B54600E01C39 /* ViewController.swift in Sources */,
+				84CA60B423563FE200D8DC52 /* MemberCellTableViewCell.swift in Sources */,
+				84CA60B223563EF500D8DC52 /* MemberList.swift in Sources */,
 				84CA60B02355F4DF00D8DC52 /* BaseView.swift in Sources */,
 				8421823F2355B54600E01C39 /* AppDelegate.swift in Sources */,
 				842182412355B54600E01C39 /* SceneDelegate.swift in Sources */,
