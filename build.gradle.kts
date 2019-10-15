@@ -3,8 +3,6 @@ buildscript {
     repositories {
         google()
         jcenter()
-//        mavenCentral()
-//        maven("https://dl.bintray.com/jetbrains/kotlin-native-dependencies")
     }
     dependencies {
         classpath(Libs.kotlin_gradle_plugin)
@@ -15,14 +13,12 @@ buildscript {
 
 plugins {
     id("de.fayard.buildSrcVersions") version Versions.de_fayard_buildsrcversions_gradle_plugin
-//    id ("org.jetbrains.kotlin.plugin.serialization") version Versions.org_jetbrains_kotlin
 }
 
 allprojects {
     repositories {
         google()
         jcenter()
-//        maven("https://kotlin.bintray.com/kotlinx")
     }
 }
 

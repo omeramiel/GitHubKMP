@@ -4,7 +4,6 @@ import kotlin.script.experimental.jvm.util.KotlinJars.stdlib
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
-//    id("org.jetbrains.kotlin.plugin.serialization")
     id ("kotlinx-serialization")
 }
 
@@ -46,7 +45,6 @@ kotlin {
         api(kotlin("stdlib-common"))
         implementation(Libs.ktor_client_core)
         implementation(Libs.kotlinx_coroutines_core_common)
-//        implementation(Libs.kotlinx_serialization_runtime_common)
         implementation(Libs.kotlinx_serialization_runtime)
     }
 
