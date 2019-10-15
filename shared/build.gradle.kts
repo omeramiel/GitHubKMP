@@ -1,8 +1,11 @@
 import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
+import kotlin.script.experimental.jvm.util.KotlinJars.stdlib
 
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
+//    id("org.jetbrains.kotlin.plugin.serialization")
+    id ("kotlinx-serialization")
 }
 
 android {
@@ -40,13 +43,15 @@ kotlin {
     }
 
     sourceSets["commonMain"].dependencies {
-        api("org.jetbrains.kotlin:kotlin-stdlib-common")
+        api(kotlin("stdlib-common"))
         implementation(Libs.ktor_client_core)
         implementation(Libs.kotlinx_coroutines_core_common)
+//        implementation(Libs.kotlinx_serialization_runtime_common)
+        implementation(Libs.kotlinx_serialization_runtime)
     }
 
     sourceSets["androidMain"].dependencies {
-        api("org.jetbrains.kotlin:kotlin-stdlib")
+        api(kotlin("stdlib-jdk8"))
         implementation(Libs.ktor_client_android)
         implementation(Libs.kotlinx_coroutines_android)
     }
@@ -54,6 +59,7 @@ kotlin {
     sourceSets["iosMain"].dependencies {
         implementation(Libs.ktor_client_ios)
         implementation(Libs.kotlinx_coroutines_core_native)
+        implementation(Libs.kotlinx_serialization_runtime_native)
     }
 }
 

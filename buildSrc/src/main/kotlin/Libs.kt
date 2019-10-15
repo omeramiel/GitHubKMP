@@ -7,39 +7,23 @@ import kotlin.String
  *   `$ ./gradlew buildSrcVersions`
  */
 object Libs {
-    const val de_fayard_buildsrcversions_gradle_plugin: String =
-            "de.fayard.buildSrcVersions:de.fayard.buildSrcVersions.gradle.plugin:" +
-            Versions.de_fayard_buildsrcversions_gradle_plugin
-
     /**
-     * https://developer.android.com/studio
+     * https://github.com/Kotlin/kotlinx.coroutines
      */
-    const val com_android_tools_build_gradle: String = "com.android.tools.build:gradle:" +
-            Versions.com_android_tools_build_gradle
+    const val kotlinx_coroutines_android: String =
+            "org.jetbrains.kotlinx:kotlinx-coroutines-android:" +
+            Versions.org_jetbrains_kotlinx_kotlinx_coroutines
 
     /**
      * https://github.com/Kotlin/kotlinx.coroutines
      */
     const val kotlinx_coroutines_core_common: String =
             "org.jetbrains.kotlinx:kotlinx-coroutines-core-common:" +
-            Versions.kotlinx_coroutines_core_common
+            Versions.org_jetbrains_kotlinx_kotlinx_coroutines
 
     const val kotlinx_coroutines_core_native: String =
             "org.jetbrains.kotlinx:kotlinx-coroutines-core-native:" +
-            Versions.kotlinx_coroutines_core_native
-
-    /**
-     * https://github.com/Kotlin/kotlinx.coroutines
-     */
-    const val kotlinx_coroutines_android: String =
-            "org.jetbrains.kotlinx:kotlinx-coroutines-android:" +
-            Versions.kotlinx_coroutines_android
-
-    /**
-     * https://developer.android.com/testing
-     */
-    const val androidx_test_ext_junit: String = "androidx.test.ext:junit:" +
-            Versions.androidx_test_ext_junit
+            Versions.org_jetbrains_kotlinx_kotlinx_coroutines
 
     /**
      * https://kotlinlang.org/
@@ -70,8 +54,14 @@ object Libs {
     /**
      * https://kotlinlang.org/
      */
-    const val kotlin_stdlib: String = "org.jetbrains.kotlin:kotlin-stdlib:" +
+    const val kotlin_serialization: String = "org.jetbrains.kotlin:kotlin-serialization:" +
             Versions.org_jetbrains_kotlin
+
+    /**
+     * https://kotlinlang.org/
+     */
+    const val kotlin_serialization_unshaded: String =
+            "org.jetbrains.kotlin:kotlin-serialization-unshaded:" + Versions.org_jetbrains_kotlin
 
     /**
      * https://kotlinlang.org/
@@ -86,6 +76,63 @@ object Libs {
             Versions.org_jetbrains_kotlin
 
     /**
+     * https://kotlinlang.org/
+     */
+    const val kotlin_stdlib_jdk8: String = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:" +
+            Versions.org_jetbrains_kotlin
+
+    /**
+     * https://github.com/ktorio/ktor
+     */
+    const val ktor_client_android: String = "io.ktor:ktor-client-android:" + Versions.io_ktor
+
+    /**
+     * https://github.com/ktorio/ktor
+     */
+    const val ktor_client_core: String = "io.ktor:ktor-client-core:" + Versions.io_ktor
+
+    /**
+     * https://github.com/ktorio/ktor
+     */
+    const val ktor_client_ios: String = "io.ktor:ktor-client-ios:" + Versions.io_ktor
+
+    /**
+     * https://developer.android.com/studio
+     */
+    const val com_android_tools_build_gradle: String = "com.android.tools.build:gradle:" +
+            Versions.com_android_tools_build_gradle
+
+    /**
+     * https://developer.android.com/testing
+     */
+    const val androidx_test_ext_junit: String = "androidx.test.ext:junit:" +
+            Versions.androidx_test_ext_junit
+
+    /**
+     * http://junit.org
+     */
+    const val junit_junit: String = "junit:junit:" + Versions.junit_junit
+
+    const val org_jetbrains_kotlin_plugin_serialization_gradle_plugin: String =
+            "org.jetbrains.kotlin.plugin.serialization:org.jetbrains.kotlin.plugin.serialization.gradle.plugin:" +
+            Versions.org_jetbrains_kotlin_plugin_serialization_gradle_plugin
+
+    const val de_fayard_buildsrcversions_gradle_plugin: String =
+            "de.fayard.buildSrcVersions:de.fayard.buildSrcVersions.gradle.plugin:" +
+            Versions.de_fayard_buildsrcversions_gradle_plugin
+
+    const val kotlinx_serialization_runtime_native: String =
+            "org.jetbrains.kotlinx:kotlinx-serialization-runtime-native:" +
+            Versions.kotlinx_serialization_runtime_native
+
+    /**
+     * https://github.com/Kotlin/kotlinx.serialization
+     */
+    const val kotlinx_serialization_runtime: String =
+            "org.jetbrains.kotlinx:kotlinx-serialization-runtime:" +
+            Versions.kotlinx_serialization_runtime
+
+    /**
      * http://tools.android.com
      */
     const val constraintlayout: String = "androidx.constraintlayout:constraintlayout:" +
@@ -98,9 +145,14 @@ object Libs {
             Versions.espresso_core
 
     /**
-     * http://junit.org
+     * https://github.com/JetBrains/anko
      */
-    const val junit_junit: String = "junit:junit:" + Versions.junit_junit
+    const val anko_commons: String = "org.jetbrains.anko:anko-commons:" + Versions.anko_commons
+
+    /**
+     * http://developer.android.com/tools/extras/support-library.html
+     */
+    const val recyclerview: String = "androidx.recyclerview:recyclerview:" + Versions.recyclerview
 
     /**
      * https://developer.android.com/studio
@@ -118,19 +170,9 @@ object Libs {
     const val core_ktx: String = "androidx.core:core-ktx:" + Versions.core_ktx
 
     /**
-     * https://github.com/ktorio/ktor
+     * https://github.com/square/picasso/
      */
-    const val ktor_client_android: String = "io.ktor:ktor-client-android:" + Versions.io_ktor
-
-    /**
-     * https://github.com/ktorio/ktor
-     */
-    const val ktor_client_core: String = "io.ktor:ktor-client-core:" + Versions.io_ktor
-
-    /**
-     * https://github.com/ktorio/ktor
-     */
-    const val ktor_client_ios: String = "io.ktor:ktor-client-ios:" + Versions.io_ktor
+    const val picasso: String = "com.squareup.picasso:picasso:" + Versions.picasso
 
     /**
      * https://developer.android.com/studio
