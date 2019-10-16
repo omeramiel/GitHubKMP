@@ -24,13 +24,13 @@ object Versions {
 
     const val junit_junit: String = "4.12"
 
-    const val org_jetbrains_kotlin_plugin_serialization_gradle_plugin: String = "1.3.50"
-
     const val de_fayard_buildsrcversions_gradle_plugin: String = "0.7.0"
 
     const val kotlinx_serialization_runtime_native: String = "0.13.0"
 
     const val kotlinx_serialization_runtime: String = "0.11.0" // available: "0.13.0"
+
+    const val multiplatform_settings: String = "0.4"
 
     const val constraintlayout: String = "1.1.3"
 

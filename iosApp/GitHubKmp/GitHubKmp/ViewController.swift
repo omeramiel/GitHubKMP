@@ -18,7 +18,7 @@ class ViewController: UIViewController, MembersView {
     let memberList =  MemberList()
     
     lazy var presenter: MembersPresenter = {
-        MembersPresenter(view: self, repository: AppDelegate.appDelegate.dataRepository)
+        MembersPresenter(view: self, repository: AppDelegate.appDelegate.dataRepository, settings: AppDelegate.appDelegate.settings)
     }()
     
     var isUpdating = false
@@ -37,7 +37,7 @@ class ViewController: UIViewController, MembersView {
         presenter.onDestroy()
     }
 
-    func onUpdate(members: [Member]) {
+    func onUpdate(members: [Member], organization: String) {
         memberList.updateMembers(newMembers: members)
         membersTableView.reloadData()
     }

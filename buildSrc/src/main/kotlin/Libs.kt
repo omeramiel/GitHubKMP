@@ -113,10 +113,6 @@ object Libs {
      */
     const val junit_junit: String = "junit:junit:" + Versions.junit_junit
 
-    const val org_jetbrains_kotlin_plugin_serialization_gradle_plugin: String =
-            "org.jetbrains.kotlin.plugin.serialization:org.jetbrains.kotlin.plugin.serialization.gradle.plugin:" +
-            Versions.org_jetbrains_kotlin_plugin_serialization_gradle_plugin
-
     const val de_fayard_buildsrcversions_gradle_plugin: String =
             "de.fayard.buildSrcVersions:de.fayard.buildSrcVersions.gradle.plugin:" +
             Versions.de_fayard_buildsrcversions_gradle_plugin
@@ -131,6 +127,9 @@ object Libs {
     const val kotlinx_serialization_runtime: String =
             "org.jetbrains.kotlinx:kotlinx-serialization-runtime:" +
             Versions.kotlinx_serialization_runtime
+
+    const val multiplatform_settings: String = "com.russhwolf:multiplatform-settings:" +
+            Versions.multiplatform_settings
 
     /**
      * http://tools.android.com

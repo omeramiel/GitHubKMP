@@ -13,15 +13,35 @@ import org.jetbrains.anko.toast
 class MainActivity : AppCompatActivity(), MembersView {
 
     private val repository by lazy { (application as GitHubKMPApplication).repository }
-    private val presenter by lazy { MembersPresenter(this, repository = repository) }
+    private val settings by lazy { (application as GitHubKMPApplication).settings }
+    private val presenter by lazy { MembersPresenter(this, repository = repository, settings = settings) }
 
     override var isUpdating = false
 
     private lateinit var adapter: MemberAdapter
 
-    override fun onUpdate(members: List<Member>) {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        greeting.text = Greeting().greeting()
+
+        setupRecyclerView()
+        searchButton.setOnClickListener {
+//            searchButton.keyboa
+            presenter.update(organizationField.text.toString())
+        }
+        presenter.onCreate()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        presenter.onDestroy()
+    }
+
+    override fun onUpdate(members: List<Member>, organization: String) {
         adapter.members = members
         runOnUiThread {
+            organizationField.setText(organization)
             adapter.notifyDataSetChanged()
         }
     }
@@ -34,20 +54,6 @@ class MainActivity : AppCompatActivity(), MembersView {
         runOnUiThread {
             toast(errorMessage)
         }
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        greeting.text = Greeting().greeting()
-
-        setupRecyclerView()
-        presenter.onCreate()
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        presenter.onDestroy()
     }
 
     private fun setupRecyclerView() {

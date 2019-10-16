@@ -3,6 +3,7 @@ package com.omeram.kotlin.githubkmp.presentation
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.SupervisorJob
 import kotlin.coroutines.CoroutineContext
 
 abstract class CoroutinePresenter(
@@ -10,7 +11,7 @@ abstract class CoroutinePresenter(
     private val baseView: BaseView
 ) : CoroutineScope {
 
-    private val job = Job()
+    private val job = SupervisorJob()
 
     private val exceptionHandler = CoroutineExceptionHandler { _, throwable ->
         baseView.showError(throwable)

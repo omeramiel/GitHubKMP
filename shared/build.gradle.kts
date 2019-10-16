@@ -46,6 +46,7 @@ kotlin {
         implementation(Libs.ktor_client_core)
         implementation(Libs.kotlinx_coroutines_core_common)
         implementation(Libs.kotlinx_serialization_runtime)
+        implementation(Libs.multiplatform_settings)
     }
 
     sourceSets["androidMain"].dependencies {
