@@ -18,7 +18,6 @@ class GitHubApi(private val settings: Settings) {
     private val client = HttpClient()
     private val baseUrl = Url("https://api.github.com/orgs")
 
-    @UnstableDefault
     suspend fun getMembers(): List<Member> {
         val membersUrl = Url("$baseUrl/${settings[ORGANIZATION_KEY, DEFAULT_ORGANIZATION]}/members")
         val result: String =  client.get {
