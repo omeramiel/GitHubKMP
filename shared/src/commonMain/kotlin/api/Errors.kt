@@ -1,3 +1,6 @@
 package com.omeram.kotlin.githubkmp.api
 
-class UpdateProblem : Throwable()
+sealed class Errors : Throwable() {
+    class UpdateProblem : Errors()
+    class ConnectionProblem : Errors()
+}

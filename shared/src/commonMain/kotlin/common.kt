@@ -1,5 +1,6 @@
 package com.omeram.kotlin.githubkmp
 
+import com.russhwolf.settings.Settings
 import com.russhwolf.settings.get
 import com.russhwolf.settings.set
 import kotlin.coroutines.CoroutineContext

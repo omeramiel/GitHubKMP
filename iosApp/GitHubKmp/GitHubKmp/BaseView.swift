@@ -17,12 +17,15 @@ extension UIViewController: BaseView {
         var errorMessage: String? = nil
         
         switch error {
-        case is UpdateProblem:
-            title = "Connection error"
+        case is Errors.UpdateProblem:
+            title = "No Members"
+            errorMessage = "Please try again"
+        case is Errors.ConnectionProblem:
+            title = "Connection Error"
             errorMessage = "Faild to load data from server, please check your internet connection"
         default:
-            title = "Unknown error"
-            errorMessage = "Try again"
+            title = "Unknown Error"
+            errorMessage = "Please try again"
         }
         
         if let message = errorMessage {

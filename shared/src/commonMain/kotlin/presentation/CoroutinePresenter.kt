@@ -2,7 +2,6 @@ package com.omeram.kotlin.githubkmp.presentation
 
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Job
 import kotlinx.coroutines.SupervisorJob
 import kotlin.coroutines.CoroutineContext
 
@@ -20,7 +19,7 @@ abstract class CoroutinePresenter(
     override val coroutineContext: CoroutineContext
         get() = presenterContext + job + exceptionHandler
 
-    abstract fun onCreate()
+//    abstract fun onCreate()
 
     open fun onDestroy() {
         job.cancel()

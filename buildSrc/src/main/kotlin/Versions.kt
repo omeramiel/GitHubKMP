@@ -32,6 +32,8 @@ object Versions {
 
     const val multiplatform_settings: String = "0.4"
 
+    const val lifecycle_extensions: String = "2.1.0"
+
     const val constraintlayout: String = "1.1.3"
 
     const val espresso_core: String = "3.2.0"
@@ -55,7 +57,7 @@ object Versions {
      * See issue 19: How to update Gradle itself?
      * https://github.com/jmfayard/buildSrcVersions/issues/19
      */
-    const val gradleLatestVersion: String = "5.6.2"
+    const val gradleLatestVersion: String = "5.6.3"
 }
 
 /**

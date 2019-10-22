@@ -35,6 +35,8 @@ dependencies {
     implementation Libs.recyclerview
     implementation Libs.picasso
     implementation Libs.multiplatform_settings
+    implementation Libs.lifecycle_extensions
+
     testImplementation Libs.junit_junit
     androidTestImplementation Libs.androidx_test_ext_junit
     androidTestImplementation Libs.espresso_core

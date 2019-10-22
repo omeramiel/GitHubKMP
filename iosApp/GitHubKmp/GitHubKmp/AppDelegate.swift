@@ -12,8 +12,7 @@ import shared
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    public lazy var settings = UserSettings().settings
-    public lazy var dataRepository = {MembersDataRepository(api: GitHubApi(settings: settings))}()
+//    public lazy var dataRepository = MembersRepository(dataSource: MembersDataSourceImpl(settings: UserSettings().settings), view: self)
     
     var window: UIWindow?
     

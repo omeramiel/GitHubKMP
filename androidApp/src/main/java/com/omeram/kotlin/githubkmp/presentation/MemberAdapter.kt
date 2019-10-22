@@ -1,9 +1,10 @@
-package com.omeram.kotlin.githubkmp
+package com.omeram.kotlin.githubkmp.presentation
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.omeram.kotlin.githubkmp.R
 import com.omeram.kotlin.githubkmp.model.Member
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.list_item_member.view.*

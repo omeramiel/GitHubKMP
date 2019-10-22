@@ -4,4 +4,5 @@
     <string name="unknown_error">Unknown Error, please try again</string>
     <string name="search">Search</string>
     <string name="enter_organization_hint">Enter organization…</string>
+    <string name="update_members_error">Cannot find members</string>
 </resources>
