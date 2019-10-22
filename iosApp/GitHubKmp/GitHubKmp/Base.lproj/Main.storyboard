@@ -22,29 +22,50 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="O7H-6w-6rG">
-                                <rect key="frame" x="0.0" y="44" width="414" height="789"/>
+                                <rect key="frame" x="0.0" y="113" width="414" height="720"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="Inl-dg-gvF"/>
                                 </connections>
                             </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I8z-v8-jup" userLabel="Organization">
+                                <rect key="frame" x="16" y="65" width="261" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="261" id="xop-3N-lLK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="108-pV-Hic" userLabel="Show">
+                                <rect key="frame" x="323" y="65" width="45" height="30"/>
+                                <state key="normal" title="Show"/>
+                                <connections>
+                                    <action selector="show:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jBB-q5-Hwd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="BEy-rc-0tg" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="8rM-1w-vDb"/>
+                            <constraint firstItem="I8z-v8-jup" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="Ay3-vi-aJO"/>
+                            <constraint firstItem="I8z-v8-jup" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="IwK-aX-aq3"/>
                             <constraint firstItem="O7H-6w-6rG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="NYf-Be-dNQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BEy-rc-0tg" secondAttribute="trailing" constant="20" id="Pb8-Nd-8Fk"/>
-                            <constraint firstItem="O7H-6w-6rG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="R8e-Z2-QBG"/>
+                            <constraint firstItem="O7H-6w-6rG" firstAttribute="top" secondItem="I8z-v8-jup" secondAttribute="bottom" constant="14" id="R8e-Z2-QBG"/>
                             <constraint firstItem="BEy-rc-0tg" firstAttribute="top" secondItem="O7H-6w-6rG" secondAttribute="bottom" constant="8" id="RlS-Hl-J3N"/>
+                            <constraint firstItem="108-pV-Hic" firstAttribute="leading" secondItem="I8z-v8-jup" secondAttribute="trailing" constant="46" id="YO3-US-4nF"/>
                             <constraint firstItem="BEy-rc-0tg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="e5G-BU-gYk"/>
                             <constraint firstItem="O7H-6w-6rG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="imV-O1-qnG"/>
+                            <constraint firstItem="108-pV-Hic" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="mtS-hc-h2d"/>
                             <constraint firstItem="BEy-rc-0tg" firstAttribute="top" secondItem="O7H-6w-6rG" secondAttribute="bottom" constant="8" id="noG-uf-kW9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="108-pV-Hic" secondAttribute="trailing" constant="46" id="xqC-WC-0NL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="greeting" destination="BEy-rc-0tg" id="TAx-Hm-ASI"/>
                         <outlet property="membersTableView" destination="O7H-6w-6rG" id="eSS-hf-BCI"/>
+                        <outlet property="organization" destination="I8z-v8-jup" id="JbS-p4-afO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
